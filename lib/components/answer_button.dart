@@ -59,20 +59,21 @@ class _AnswerButtonState extends State<AnswerButton> {
       child: Stack(
         clipBehavior: Clip.none, // ✅ 그림자가 정상적으로 표시되도록 처리
         children: [
-          // ✅ 그림자 효과 (버튼과 동일한 크기 & 라운드 처리)
-          Positioned(
-            top: isPressed ? 5 : 8, // ✅ 눌렀을 때 그림자 위치 조정
-            left: 0,
-            right: 0,
-            child: Container(
-              width: widget.width,
-              height: widget.height,
-              decoration: BoxDecoration(
-                color: shadowColor, // ✅ 그림자 색상
-                borderRadius: BorderRadius.circular(12), // ✅ 버튼과 동일한 라운드 처리
+          // ✅ 그림자 효과 (버튼과 동일한 크기 & 라운드 처리, 눌렀을 때 제거)
+          if (!isPressed) // ✅ 버튼을 누르면 그림자 제거
+            Positioned(
+              top: 10, // ✅ 그림자 위치 조정
+              left: 0,
+              right: 0,
+              child: Container(
+                width: widget.width,
+                height: widget.height,
+                decoration: BoxDecoration(
+                  color: shadowColor, // ✅ 그림자 색상
+                  borderRadius: BorderRadius.circular(12), // ✅ 버튼과 동일한 라운드 처리
+                ),
               ),
             ),
-          ),
 
           // ✅ 실제 버튼
           Positioned(
