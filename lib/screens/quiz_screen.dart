@@ -1,3 +1,4 @@
+import 'dart:async'; // ✅ Timer 사용을 위해 추가
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:math';
@@ -26,10 +27,40 @@ class _QuizScreenState extends State<QuizScreen> {
   List<String> _answerChoices = [];
   bool isGameOver = false; // ✅ 게임 오버 상태 확인
 
+  int _remainingTime = 10; // ✅ 초기값 (기본값: 10초)
+  late Timer _timer;
+
   @override
   void initState() {
     super.initState();
     _loadQuestions();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel(); // ✅ 타이머 정리
+    super.dispose();
+  }
+
+  // ✅ RabbitZone에서 게임 시작할 때 시간을 받아오는 메서드
+  void _onGameStart(int fallDuration) {
+    setState(() {
+      _remainingTime = fallDuration; // ✅ RabbitZone에서 전달받은 시간으로 설정
+    });
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_remainingTime > 0) {
+        setState(() {
+          _remainingTime--;
+        });
+      } else {
+        timer.cancel();
+        _gameOver(); // ✅ 시간이 다 되면 게임 오버
+      }
+    });
   }
 
   Future<void> _loadQuestions() async {
@@ -99,6 +130,16 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
+  // ✅ level.json → "8급" 형태로 변환
+  String _convertLevelFormat(String level) {
+    if (level.contains("lvl")) {
+      return level.replaceAll(RegExp(r'[^0-9]'), "") + "급";
+    } else if (level.contains("teuk")) {
+      return "특급";
+    }
+    return level;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,11 +156,12 @@ class _QuizScreenState extends State<QuizScreen> {
                 child: ProblemDisplay(hanja: _currentHanja),
               ),
 
-              // ✅ 토끼 (애니메이션 적용)
+              // ✅ 토끼 (애니메이션 적용) → RabbitZone에서 시간 전달
               Expanded(
                 flex: 3,
                 child: RabbitZone(
                   onGameOver: _gameOver, // ✅ 게임 오버 시 실행
+                  onGameStart: _onGameStart, // ✅ 게임 시작 시 fallDuration 전달받음
                 ),
               ),
 
@@ -162,6 +204,46 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
               ),
             ],
+          ),
+
+          // ✅ 좌측 상단: 남은 시간 표시 (위치 조정)
+          Positioned(
+            top: 50, // ✅ 노티바에 가리지 않도록 조정
+            left: 20,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.6),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                "⏳ $_remainingTime 초",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontFamily: "NeoDunggeunmo",
+                ),
+              ),
+            ),
+          ),
+
+          // ✅ 화면 중앙 상단: 급수 표시 (변환된 형식)
+          Positioned(
+            top: 50, // ✅ 노티바와 겹치지 않도록 위치 조정
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Text(
+                _convertLevelFormat(widget.level), // ✅ "lvl8.json" → "8급" 변환
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontFamily: "NeoDunggeunmo",
+                ),
+              ),
+            ),
           ),
 
           // ✅ 게임 오버 화면 추가
