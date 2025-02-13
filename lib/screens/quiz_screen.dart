@@ -26,8 +26,6 @@ class _QuizScreenState extends State<QuizScreen> {
   List<String> _answerChoices = [];
   bool isGameOver = false; // ✅ 게임 오버 상태 확인
 
-  final GlobalKey<RabbitZoneState> rabbitKey = GlobalKey<RabbitZoneState>(); // ✅ RabbitZone 상태 변경을 위한 key
-
   @override
   void initState() {
     super.initState();
@@ -85,17 +83,6 @@ class _QuizScreenState extends State<QuizScreen> {
 
     bool isCorrect = selected == _currentMeaning;
 
-    // ✅ Rabbit 위치 변경 (정답: 위로 계속 올라감, 오답: 아래로 내려감)
-    if (isCorrect) {
-      for (int i = 0; i < 3; i++) {
-        Future.delayed(Duration(milliseconds: 100 * i), () {
-          rabbitKey.currentState?.updateRabbitPosition(true);
-        });
-      }
-    } else {
-      rabbitKey.currentState?.updateRabbitPosition(false);
-    }
-
     if (isCorrect) {
       print("✅ 정답!");
     } else {
@@ -128,11 +115,10 @@ class _QuizScreenState extends State<QuizScreen> {
                 child: ProblemDisplay(hanja: _currentHanja),
               ),
 
-              // ✅ 토끼 + 원형 판 (애니메이션 적용)
+              // ✅ 토끼 (애니메이션 적용)
               Expanded(
                 flex: 3,
                 child: RabbitZone(
-                  key: rabbitKey,
                   onGameOver: _gameOver, // ✅ 게임 오버 시 실행
                 ),
               ),

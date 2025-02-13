@@ -9,91 +9,73 @@ class RabbitZone extends StatefulWidget {
   RabbitZoneState createState() => RabbitZoneState();
 }
 
-class RabbitZoneState extends State<RabbitZone> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-  double rabbitOffset = 0; // ✅ 토끼가 위/아래로 움직이는 값
-  final double seaLevel = 180; // ✅ 바다에 닿으면 게임 오버 (조정 가능)
-  final double maxHeight = -100; // ✅ 토끼가 올라갈 수 있는 최대 높이 (더 높이 올라가도록 수정)
+class RabbitZoneState extends State<RabbitZone> with TickerProviderStateMixin {
+  late AnimationController _fallController;
+  late AnimationController _rotationController;
+  late Animation<double> _fallAnimation;
+  late Animation<double> _rotationAnimation;
 
-  // ✅ 토끼가 내려오는 속도 (초 단위) → 여기서 조절 가능
-  int fallDuration = 50; // 기본값: 10초
+  final double seaLevel = 180; // ✅ 바다에 닿으면 게임 오버 (조정 가능)
+  int fallDuration = 50; // ✅ 내려오는 속도 조절 가능
 
   @override
   void initState() {
     super.initState();
-
-    _setupAnimation();
+    _setupAnimations();
   }
 
-  void _setupAnimation() {
-    _controller = AnimationController(
+  void _setupAnimations() {
+    // ✅ 낙하 애니메이션 설정 (서서히 내려옴)
+    _fallController = AnimationController(
       vsync: this,
       duration: Duration(seconds: fallDuration), // ✅ 내려오는 속도 조절 가능
     );
 
-    _animation = Tween<double>(begin: 0, end: 300).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.linear),
+    _fallAnimation = Tween<double>(begin: 0, end: 300).animate(
+      CurvedAnimation(parent: _fallController, curve: Curves.linear),
     );
 
-    _controller.addListener(() {
-      if (_animation.value + rabbitOffset >= seaLevel) {
+    // ✅ 회전 애니메이션 (토끼가 부드럽게 회전)
+    _rotationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2), // ✅ 회전 속도
+    )..repeat(reverse: true); // ✅ 회전 애니메이션 반복
+
+    _rotationAnimation = Tween<double>(begin: -0.1, end: 0.1).animate(
+      CurvedAnimation(parent: _rotationController, curve: Curves.easeInOut),
+    );
+
+    _fallController.addListener(() {
+      if (_fallAnimation.value >= seaLevel) {
         widget.onGameOver(); // ✅ 바다에 닿으면 게임 오버
-        _controller.stop(); // ✅ 애니메이션 정지
+        _fallController.stop(); // ✅ 애니메이션 정지
+        _rotationController.stop(); // ✅ 회전 정지
       }
     });
 
-    _controller.forward(); // ✅ 애니메이션 시작
+    _fallController.forward(); // ✅ 애니메이션 시작
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _fallController.dispose();
+    _rotationController.dispose();
     super.dispose();
-  }
-
-  // ✅ 정답 체크에 따라 위치 변경 (반복 적용 가능)
-  void updateRabbitPosition(bool isCorrect) {
-    setState(() {
-      if (isCorrect) {
-        rabbitOffset = (rabbitOffset - 10).clamp(maxHeight, double.infinity); // ✅ 계속 위로 올라감
-      } else {
-        rabbitOffset += 3; // ✅ 틀리면 더 빨리 내려감
-      }
-    });
-
-    // ✅ 지속적으로 호출되도록 함
-    if (!isCorrect) return;
-    Future.delayed(const Duration(milliseconds: 100), () {
-      updateRabbitPosition(true);
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: _animation,
+      animation: _fallAnimation,
       builder: (context, child) {
         return Transform.translate(
-          offset: Offset(0, _animation.value + rabbitOffset), // ✅ 토끼 위치 반영
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset('lib/assets/images/rabbit.png', width: 50),
-              Container(
-                width: 100,
-                height: 10,
-                decoration: BoxDecoration(
-                  color: const Color(0xffD9D9D9),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-              ),
-              Container(
-                width: 10,
-                height: 166,
-                color: const Color(0xffD9D9D9),
-              ),
-            ],
+          offset: Offset(0, _fallAnimation.value), // ✅ 토끼 위치 반영
+          child: Transform.rotate(
+            angle: _rotationAnimation.value, // ✅ 회전 효과 적용
+            child: Image.asset(
+              'lib/assets/images/rabbit.png',
+              width: 50,
+            ),
           ),
         );
       },
