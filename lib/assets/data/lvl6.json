@@ -1,0 +1,677 @@
+[
+  {
+    "main_sound": "감",
+    "level": "6",
+    "hanja": "感",
+    "meaning": "느낄감",
+    "radical": "心",
+    "strokes": "9",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "강",
+    "level": "6",
+    "hanja": "強",
+    "meaning": "강할 강",
+    "radical": "弓",
+    "strokes": "8",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "개",
+    "level": "6",
+    "hanja": "開",
+    "meaning": "열 개",
+    "radical": "門",
+    "strokes": "4",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "경",
+    "level": "6",
+    "hanja": "京",
+    "meaning": "서울 경",
+    "radical": "亠",
+    "strokes": "6",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "고",
+    "level": "6",
+    "hanja": "古",
+    "meaning": "예 고",
+    "radical": "口",
+    "strokes": "2",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "고",
+    "level": "6",
+    "hanja": "苦",
+    "meaning": "쓸[味覺] 고",
+    "radical": "艸",
+    "strokes": "5",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "교",
+    "level": "6",
+    "hanja": "交",
+    "meaning": "사귈 교",
+    "radical": "亠",
+    "strokes": "4",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "구",
+    "level": "6",
+    "hanja": "區",
+    "meaning": "구분할', '지경 구",
+    "radical": "匸",
+    "strokes": "9",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "군",
+    "level": "6",
+    "hanja": "郡",
+    "meaning": "고을 군",
+    "radical": "邑",
+    "strokes": "7",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "근",
+    "level": "6",
+    "hanja": "根",
+    "meaning": "뿌리 근",
+    "radical": "木",
+    "strokes": "6",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "근",
+    "level": "6",
+    "hanja": "近",
+    "meaning": "가까울 근",
+    "radical": "辵",
+    "strokes": "4",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "급",
+    "level": "6",
+    "hanja": "級",
+    "meaning": "등급 급",
+    "radical": "糸",
+    "strokes": "4",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "다",
+    "level": "6",
+    "hanja": "多",
+    "meaning": "많을 다",
+    "radical": "夕",
+    "strokes": "3",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "대",
+    "level": "6",
+    "hanja": "待",
+    "meaning": "기다릴 대",
+    "radical": "彳",
+    "strokes": "6",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "도",
+    "level": "6",
+    "hanja": "度",
+    "meaning": "법도 도헤아릴 탁",
+    "radical": "广",
+    "strokes": "6",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "두",
+    "level": "6",
+    "hanja": "頭",
+    "meaning": "머리 두",
+    "radical": "頁",
+    "strokes": "7",
+    "total_strokes": "16"
+  },
+  {
+    "main_sound": "례",
+    "level": "6",
+    "hanja": "例",
+    "meaning": "법식 례",
+    "radical": "人",
+    "strokes": "6",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "례",
+    "level": "6",
+    "hanja": "禮",
+    "meaning": "예도 례",
+    "radical": "示",
+    "strokes": "13",
+    "total_strokes": "18"
+  },
+  {
+    "main_sound": "로",
+    "level": "6",
+    "hanja": "路",
+    "meaning": "길 로",
+    "radical": "足",
+    "strokes": "6",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "록",
+    "level": "6",
+    "hanja": "綠",
+    "meaning": "푸를 록",
+    "radical": "糸",
+    "strokes": "8",
+    "total_strokes": "14"
+  },
+  {
+    "main_sound": "리",
+    "level": "6",
+    "hanja": "李",
+    "meaning": "오얏', '성(姓) 리",
+    "radical": "木",
+    "strokes": "3",
+    "total_strokes": "7"
+  },
+  {
+    "main_sound": "목",
+    "level": "6",
+    "hanja": "目",
+    "meaning": "눈 목",
+    "radical": "目",
+    "strokes": "0",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "미",
+    "level": "6",
+    "hanja": "美",
+    "meaning": "아름다울 미",
+    "radical": "羊",
+    "strokes": "3",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "미",
+    "level": "6",
+    "hanja": "米",
+    "meaning": "쌀 미",
+    "radical": "米",
+    "strokes": "0",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "박",
+    "level": "6",
+    "hanja": "朴",
+    "meaning": "성(姓) 박",
+    "radical": "木",
+    "strokes": "2",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "번",
+    "level": "6",
+    "hanja": "番",
+    "meaning": "차례 번",
+    "radical": "田",
+    "strokes": "7",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "별",
+    "level": "6",
+    "hanja": "別",
+    "meaning": "다를', '나눌 별",
+    "radical": "刀",
+    "strokes": "5",
+    "total_strokes": "7"
+  },
+  {
+    "main_sound": "병",
+    "level": "6",
+    "hanja": "病",
+    "meaning": "병 병",
+    "radical": "疒",
+    "strokes": "5",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "복",
+    "level": "6",
+    "hanja": "服",
+    "meaning": "옷 복",
+    "radical": "月",
+    "strokes": "4",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "본",
+    "level": "6",
+    "hanja": "本",
+    "meaning": "근본 본",
+    "radical": "木",
+    "strokes": "1",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "사",
+    "level": "6",
+    "hanja": "使",
+    "meaning": "하여금', '부릴 사",
+    "radical": "人",
+    "strokes": "6",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "사",
+    "level": "6",
+    "hanja": "死",
+    "meaning": "죽을 사",
+    "radical": "歹",
+    "strokes": "2",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "석",
+    "level": "6",
+    "hanja": "席",
+    "meaning": "자리 석",
+    "radical": "巾",
+    "strokes": "7",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "석",
+    "level": "6",
+    "hanja": "石",
+    "meaning": "돌 석",
+    "radical": "石",
+    "strokes": "0",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "속",
+    "level": "6",
+    "hanja": "速",
+    "meaning": "빠를 속",
+    "radical": "辵",
+    "strokes": "7",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "손",
+    "level": "6",
+    "hanja": "孫",
+    "meaning": "손자 손",
+    "radical": "子",
+    "strokes": "7",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "수",
+    "level": "6",
+    "hanja": "樹",
+    "meaning": "나무 수",
+    "radical": "木",
+    "strokes": "12",
+    "total_strokes": "16"
+  },
+  {
+    "main_sound": "습",
+    "level": "6",
+    "hanja": "習",
+    "meaning": "익힐 습",
+    "radical": "羽",
+    "strokes": "5",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "승",
+    "level": "6",
+    "hanja": "勝",
+    "meaning": "이길 승",
+    "radical": "力",
+    "strokes": "10",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "식",
+    "level": "6",
+    "hanja": "式",
+    "meaning": "법 식",
+    "radical": "弋",
+    "strokes": "3",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "실",
+    "level": "6",
+    "hanja": "失",
+    "meaning": "잃을 실",
+    "radical": "大",
+    "strokes": "2",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "애",
+    "level": "6",
+    "hanja": "愛",
+    "meaning": "사랑 애",
+    "radical": "心",
+    "strokes": "9",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "야",
+    "level": "6",
+    "hanja": "夜",
+    "meaning": "밤 야",
+    "radical": "夕",
+    "strokes": "5",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "야",
+    "level": "6",
+    "hanja": "野",
+    "meaning": "들[坪] 야",
+    "radical": "里",
+    "strokes": "4",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "양",
+    "level": "6",
+    "hanja": "陽",
+    "meaning": "볕 양",
+    "radical": "阜",
+    "strokes": "9",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "양",
+    "level": "6",
+    "hanja": "洋",
+    "meaning": "큰바다 양",
+    "radical": "水",
+    "strokes": "6",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "언",
+    "level": "6",
+    "hanja": "言",
+    "meaning": "말씀 언",
+    "radical": "言",
+    "strokes": "0",
+    "total_strokes": "7"
+  },
+  {
+    "main_sound": "영",
+    "level": "6",
+    "hanja": "英",
+    "meaning": "꽃부리 영",
+    "radical": "艸",
+    "strokes": "5",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "영",
+    "level": "6",
+    "hanja": "永",
+    "meaning": "길 영",
+    "radical": "水",
+    "strokes": "1",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "온",
+    "level": "6",
+    "hanja": "溫",
+    "meaning": "따뜻할 온",
+    "radical": "水",
+    "strokes": "10",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "원",
+    "level": "6",
+    "hanja": "園",
+    "meaning": "동산 원",
+    "radical": "囗",
+    "strokes": "10",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "원",
+    "level": "6",
+    "hanja": "遠",
+    "meaning": "멀 원",
+    "radical": "辵",
+    "strokes": "10",
+    "total_strokes": "14"
+  },
+  {
+    "main_sound": "유",
+    "level": "6",
+    "hanja": "由",
+    "meaning": "말미암을 유",
+    "radical": "田",
+    "strokes": "0",
+    "total_strokes": "5"
+  },
+  {
+    "main_sound": "유",
+    "level": "6",
+    "hanja": "油",
+    "meaning": "기름 유",
+    "radical": "水",
+    "strokes": "5",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "은",
+    "level": "6",
+    "hanja": "銀",
+    "meaning": "은 은",
+    "radical": "金",
+    "strokes": "6",
+    "total_strokes": "14"
+  },
+  {
+    "main_sound": "의",
+    "level": "6",
+    "hanja": "醫",
+    "meaning": "의원 의",
+    "radical": "酉",
+    "strokes": "11",
+    "total_strokes": "18"
+  },
+  {
+    "main_sound": "의",
+    "level": "6",
+    "hanja": "衣",
+    "meaning": "옷 의",
+    "radical": "衣",
+    "strokes": "0",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "자",
+    "level": "6",
+    "hanja": "者",
+    "meaning": "놈 자",
+    "radical": "老",
+    "strokes": "5",
+    "total_strokes": "9"
+  },
+  {
+    "main_sound": "장",
+    "level": "6",
+    "hanja": "章",
+    "meaning": "글 장",
+    "radical": "立",
+    "strokes": "6",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "재",
+    "level": "6",
+    "hanja": "在",
+    "meaning": "있을 재",
+    "radical": "土",
+    "strokes": "3",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "정",
+    "level": "6",
+    "hanja": "定",
+    "meaning": "정할 정",
+    "radical": "宀",
+    "strokes": "5",
+    "total_strokes": "8"
+  },
+  {
+    "main_sound": "조",
+    "level": "6",
+    "hanja": "朝",
+    "meaning": "아침 조",
+    "radical": "月",
+    "strokes": "8",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "족",
+    "level": "6",
+    "hanja": "族",
+    "meaning": "겨레 족",
+    "radical": "方",
+    "strokes": "7",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "주",
+    "level": "6",
+    "hanja": "晝",
+    "meaning": "낮 주",
+    "radical": "日",
+    "strokes": "7",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "친",
+    "level": "6",
+    "hanja": "親",
+    "meaning": "친할 친",
+    "radical": "見",
+    "strokes": "9",
+    "total_strokes": "16"
+  },
+  {
+    "main_sound": "태",
+    "level": "6",
+    "hanja": "太",
+    "meaning": "클 태",
+    "radical": "大",
+    "strokes": "1",
+    "total_strokes": "4"
+  },
+  {
+    "main_sound": "통",
+    "level": "6",
+    "hanja": "通",
+    "meaning": "통할 통",
+    "radical": "辵",
+    "strokes": "7",
+    "total_strokes": "11"
+  },
+  {
+    "main_sound": "특",
+    "level": "6",
+    "hanja": "特",
+    "meaning": "특별할 특",
+    "radical": "牛",
+    "strokes": "6",
+    "total_strokes": "10"
+  },
+  {
+    "main_sound": "합",
+    "level": "6",
+    "hanja": "合",
+    "meaning": "합할 합",
+    "radical": "口",
+    "strokes": "3",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "행",
+    "level": "6",
+    "hanja": "行",
+    "meaning": "다닐 행, 항렬 항",
+    "radical": "行",
+    "strokes": "0",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "향",
+    "level": "6",
+    "hanja": "向",
+    "meaning": "향할 향",
+    "radical": "口",
+    "strokes": "3",
+    "total_strokes": "6"
+  },
+  {
+    "main_sound": "호",
+    "level": "6",
+    "hanja": "號",
+    "meaning": "이름 호",
+    "radical": "虍",
+    "strokes": "7",
+    "total_strokes": "13"
+  },
+  {
+    "main_sound": "화",
+    "level": "6",
+    "hanja": "畫",
+    "meaning": "그림 화, 그을 획(劃)",
+    "radical": "田",
+    "strokes": "7",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "황",
+    "level": "6",
+    "hanja": "黃",
+    "meaning": "누를 황",
+    "radical": "黃",
+    "strokes": "0",
+    "total_strokes": "12"
+  },
+  {
+    "main_sound": "훈",
+    "level": "6",
+    "hanja": "訓",
+    "meaning": "가르칠 훈",
+    "radical": "言",
+    "strokes": "3",
+    "total_strokes": "10"
+  }
+]
